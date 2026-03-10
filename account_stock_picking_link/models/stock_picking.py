@@ -6,9 +6,9 @@ class StockPicking(models.Model):
 
     invoice_ids = fields.Many2many(
         'account.move',
-        'account_move_stock_picking_rel',
-        'picking_id',
-        'move_id',
+        'account_invoice_picking_rel',
+        'stock_picking_id',
+        'account_move_id',
         string="Faturalar"
     )
     invoice_count = fields.Integer(compute='_compute_invoice_count', string="Fatura Sayısı")

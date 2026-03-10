@@ -6,9 +6,9 @@ class AccountMove(models.Model):
 
     picking_ids = fields.Many2many(
         'stock.picking',
-        'account_move_stock_picking_rel',
-        'move_id',
-        'picking_id',
+        'account_invoice_picking_rel',
+        'account_move_id',
+        'stock_picking_id',
         string="Transferler"
     )
     picking_count = fields.Integer(compute='_compute_picking_count', string="Transfer Sayısı")

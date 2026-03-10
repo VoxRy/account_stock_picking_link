@@ -9,7 +9,8 @@ class AccountMove(models.Model):
         'account_invoice_picking_rel',
         'account_move_id',
         'stock_picking_id',
-        string="Transferler"
+        string="Transferler",
+        states={'draft': [('readonly', False)], 'posted': [('readonly', False)]}
     )
     picking_count = fields.Integer(compute='_compute_picking_count', string="Transfer Sayısı")
 

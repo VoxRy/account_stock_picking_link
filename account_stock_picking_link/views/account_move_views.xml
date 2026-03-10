@@ -16,8 +16,8 @@
             </xpath>
             <xpath expr="//notebook" position="inside">
                 <page string="Transferler" name="picking_page">
-                    <field name="picking_ids" nolabel="1" attrs="{'readonly': [('state', 'not in', ('draft', 'posted'))]}">
-                        <tree string="Transferler">
+                    <field name="picking_ids" nolabel="1" widget="many2many" attrs="{'readonly': [('state', 'not in', ('draft', 'posted'))]}">
+                        <tree string="Transferler" create="1" delete="1">
                             <field name="company_id" invisible="1"/>
                             <field name="name" string="Transfer"/>
                             <field name="partner_id" string="İlgili Kişi"/>

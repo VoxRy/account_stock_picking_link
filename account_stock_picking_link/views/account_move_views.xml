@@ -16,14 +16,14 @@
             </xpath>
             <xpath expr="//notebook" position="inside">
                 <page string="Transferler" name="picking_page">
-                    <field name="picking_ids" nolabel="1" widget="many2many" attrs="{'readonly': [('state', 'not in', ('draft', 'posted'))]}">
-                        <tree string="Transferler" create="1" delete="1">
+                    <field name="picking_ids" nolabel="1" mode="tree">
+                        <tree string="Transferler" create="true" edit="true" delete="true">
                             <field name="company_id" invisible="1"/>
-                            <field name="name" string="Transfer"/>
-                            <field name="partner_id" string="İlgili Kişi"/>
-                            <field name="origin" string="Kaynak Belge"/>
-                            <field name="scheduled_date" string="Planlanan Tarih"/>
-                            <field name="state" string="Durum"/>
+                            <field name="name"/>
+                            <field name="partner_id"/>
+                            <field name="origin"/>
+                            <field name="scheduled_date"/>
+                            <field name="state"/>
                         </tree>
                     </field>
                 </page>
